@@ -1,0 +1,18 @@
+---
+project_name: "{{ project_name }}"
+env_type: "{{environment_type}}"
+env_namespace: "{{environment_namespace}}"
+
+location: "{{location}}"
+
+infra:
+  region: "{{region}}"
+  type: "{{type}}"
+  identifier: "{{identifier}}"
+
+clt_type: "{{cluster_type}}"
+{% raw -%}
+cluster_name: "{{ project_name }}-{{ infra.type }}{{ infra.identifier }}"
+
+
+{% endraw -%}
